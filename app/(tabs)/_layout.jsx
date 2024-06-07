@@ -6,7 +6,7 @@ import { icons } from '../../constants/icons'
 
 const TabIcon = (icon, color, name, focused) =>{
   return (
-    <View>
+    <View className="items-center justify-center gap-2">
       <Image 
         source={icon}
         resizeMode="contain"
@@ -23,7 +23,12 @@ const TabIcon = (icon, color, name, focused) =>{
 const TabsLayout = () => {
   return (
     <>
-    <Tabs>
+    <Tabs 
+      screenOptions={{
+        tabBarShowLabel: false
+      }}
+    >
+
       <Tabs.Screen
         name="home"
         options={{

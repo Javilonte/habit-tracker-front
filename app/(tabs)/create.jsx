@@ -3,22 +3,47 @@ import { View, TextInput, Button } from 'react-native';
 
 const CreateHabit = () => {
     const [habitName, setHabitName] = useState('');
+  const [description, setDescription] = useState('');
+  const [frequency, setFrequency] = useState('');
+  const navigation = useNavigation();
 
-    const handleCreateHabit = () => {
-        // Lógica para crear el hábito
-        console.log('Habit created:', habitName);
-    };
+  const handleCreateHabit = () => {
+    if (habitName === '' || frequency === '') {
+      Alert.alert('Error', 'Por favor completa todos los campos obligatorios');
+      return;
+    }
 
-    return (
-        <View className="flex-1 justify-center p-4">
-            <TextInput
-                className="h-10 border border-gray-400 mb-3 px-2"
-                placeholder="Enter habit name"
-                value={habitName}
-                onChangeText={setHabitName}
-            />
-            <Button title="Create Habit" onPress={handleCreateHabit} />
-        </View>
+    Alert.alert('Éxito', 'Hábito creado exitosamente');
+    navigation.goBack();
+  };
+
+  return (
+    <View style={tailwind('flex-1 p-4')}>
+      <Text style={tailwind('text-2xl font-bold mb-4')}>Crear Nuevo Hábito</Text>
+
+      <TextInput
+        style={tailwind('border p-2 mb-4')}
+        placeholder="Nombre del Hábito"
+        value={habitName}
+        onChangeText={setHabitName}
+      />
+
+      <TextInput
+        style={tailwind('border p-2 mb-4')}
+        placeholder="Descripción"
+        value={description}
+        onChangeText={setDescription}
+      />
+
+      <TextInput
+        style={tailwind('border p-2 mb-4')}
+        placeholder="Frecuencia (ej. Diario, Semanal)"
+        value={frequency}
+        onChangeText={setFrequency}
+      />
+
+      <Button title="Crear Hábito" onPress={handleCreateHabit} />
+    </View>
     );
 };
 

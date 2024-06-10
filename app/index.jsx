@@ -38,6 +38,7 @@ export default function Index() {
           </Text>
 
           <Link href="/home"> Go to home</Link>
+          <Link href="/create"> Go to create</Link>
           <StatusBar backgroundColor="#161622" style="light" />
           {/* <CustomButton
             title="Continue with Email"

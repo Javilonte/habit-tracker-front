@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { Text, View, TextInput, Button } from 'react-native';
+import { useNavigation } from 'expo-router';
 
 const CreateHabit = () => {
     const [habitName, setHabitName] = useState('');
@@ -18,25 +19,25 @@ const CreateHabit = () => {
   };
 
   return (
-    <View style={tailwind('flex-1 p-4')}>
-      <Text style={tailwind('text-2xl font-bold mb-4')}>Crear Nuevo Hábito</Text>
+    <View className='flex-1 p-4 justify-center'>
+      <Text className='text-2xl font-bold mb-4'>Crear Nuevo Hábito</Text>
 
       <TextInput
-        style={tailwind('border p-2 mb-4')}
+        className='border p-2 mb-4'
         placeholder="Nombre del Hábito"
         value={habitName}
         onChangeText={setHabitName}
       />
 
       <TextInput
-        style={tailwind('border p-2 mb-4')}
+        className='border p-2 mb-4'
         placeholder="Descripción"
         value={description}
         onChangeText={setDescription}
       />
 
       <TextInput
-        style={tailwind('border p-2 mb-4')}
+       className='border p-2 mb-4'
         placeholder="Frecuencia (ej. Diario, Semanal)"
         value={frequency}
         onChangeText={setFrequency}

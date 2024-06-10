@@ -1,4 +1,5 @@
 import { Text, View, Image} from "react-native";
+import { StatusBar } from "expo-status-bar";
 import { Link } from 'expo-router'
 import {icons} from '../constants/icons';
 
@@ -25,7 +26,7 @@ export default function Index() {
             </Text>
 
             <Image
-              source={icons.logo}
+              source={icons.eye}
               className="w-[136px] h-[15px] absolute -bottom-2 -right-8"
               resizeMode="contain"
             />
@@ -36,6 +37,8 @@ export default function Index() {
             Exploration with HabitQuest
           </Text>
 
+          <Link href="/home"> Go to home</Link>
+          <StatusBar backgroundColor="#161622" style="light" />
           {/* <CustomButton
             title="Continue with Email"
             handlePress={() => router.push("/sign-in")}

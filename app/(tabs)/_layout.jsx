@@ -3,15 +3,14 @@ import React from 'react'
 import { Tabs , Redirect} from 'expo-router'
 import { icons } from '../../constants/icons'
 
-
-const TabIcon = (icon, color, name, focused) =>{
+const TabIcon = (icon,color,  name, focused) =>{
   return (
     <View className="items-center justify-center gap-2">
       <Image 
         source={icon}
         resizeMode="contain"
         tintColor={color}
-        className="w-6 h-6"
+        className="w-10 h-10 bg-buttons p-6 "
       />
       <Text className={`${focused ? 'font-psemibold' : 'font-pregular'}`}>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, TextInput, Button } from 'react-native';
+import { Text, View, TextInput, Button, Alert } from 'react-native';
 import { useNavigation } from 'expo-router';
 
 const CreateHabit = () => {
@@ -23,21 +23,21 @@ const CreateHabit = () => {
       <Text className='text-2xl font-bold mb-4'>Crear Nuevo Hábito</Text>
 
       <TextInput
-        className='border p-2 mb-4'
+        className='border p-2 mb-4 rounded-lg border-gray-300'
         placeholder="Nombre del Hábito"
         value={habitName}
         onChangeText={setHabitName}
       />
 
       <TextInput
-        className='border p-2 mb-4'
+        className='border p-2 mb-4 rounded-lg border-gray-300'
         placeholder="Descripción"
         value={description}
         onChangeText={setDescription}
       />
 
       <TextInput
-       className='border p-2 mb-4'
+       className='border p-2 mb-4 rounded-lg border-gray-300'
         placeholder="Frecuencia (ej. Diario, Semanal)"
         value={frequency}
         onChangeText={setFrequency}

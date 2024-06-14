@@ -19,8 +19,8 @@ const CreateHabit = () => {
   };
 
   return (
-    <View className='flex-1 p-4 justify-center'>
-      <Text className='text-2xl font-bold mb-4'>Crear Nuevo Hábito</Text>
+    <View className='flex-1 p-4 justify-center bg-background'>
+      <Text className='text-2xl font-bold mb-4 text-center'>Crear Nuevo Hábito</Text>
 
       <TextInput
         className='border p-2 mb-4 rounded-lg border-gray-300'

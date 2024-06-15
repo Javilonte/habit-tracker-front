@@ -1,9 +1,9 @@
-import { Text, View, Image} from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Link } from 'expo-router'
 import { icons } from '../constants/icons'
 import { SafeAreaView } from "react-native-safe-area-context";
-import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
+import { GestureHandlerRootView} from "react-native-gesture-handler";
 import CustomButton from "../components/CustomButton";
 
 export default function Index() {

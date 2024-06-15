@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+# Habit Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este es un proyecto de una aplicación de seguimiento de hábitos con un tema medieval-fantástico, creada con React Native, Expo y Tailwind CSS.
 
-## Get started
+## Estructura del Proyecto
 
-1. Install dependencies
+La estructura de carpetas del proyecto es la siguiente:
 
-   ```bash
-   npm install
-   ```
+habit-tracker-front/
+│
+├── .expo/
+│
+├── app/
+│   ├── (auth)/
+│   │   ├── _layout.jsx
+│   │   ├── sign-in.jsx
+│   │   └── sign-up.jsx
+│   ├── (tabs)/
+│   │   ├── _layout.jsx
+│   │   ├── bookmark.jsx
+│   │   ├── create.jsx
+│   │   ├── home.jsx
+│   │   ├── profile.jsx
+│   │   └── search.jsx
+│   └── index.jsx
+│
+├── assets/
+│   ├── fonts/
+│   ├── icons/
+│   └── images/
+│
+├── components/
+│   ├── tests/
+│   ├── navigation/
+│   │   ├── Collapsible.tsx
+│   │   ├── CustomButton.jsx
+│   │   ├── ExternalLink.tsx
+│   │   ├── HelloWave.tsx
+│   │   ├── ParallaxScrollView.tsx
+│   │   ├── ThemedText.tsx
+│   │   └── ThemedView.tsx
+│   └── CustomButton.jsx
+│
+├── constants/
+│   ├── Colors.ts
+│   └── icons.js
+│
+├── context/
+│   └── GlobalProvider.js
 
-2. Start the app
+## Instalación
 
-   ```bash
+Sigue estos pasos para configurar y ejecutar el proyecto localmente:
+
+1. **Clona el repositorio:**
+
+    ```bash
+    git clone https://github.com/tu_usuario/habit-tracker-front.git
+    cd habit-tracker-front
+    ```
+
+2. **Instala las dependencias:**
+
+    ```bash
+    npm install
+    ```
+
+3. **Ejecuta el proyecto:**
+
+    ```bash
     npx expo start
-   ```
+    ```
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+    Esto iniciará el servidor de desarrollo de Expo.

@@ -1,14 +1,17 @@
 import { Text, View, Image, ScrollView } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { Link } from 'expo-router'
+import { Link, Redirect } from 'expo-router'
 import { icons } from '../constants/icons'
 import { SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView} from "react-native-gesture-handler";
 import CustomButton from "../components/CustomButton";
 
 export default function Index() {
-  return (
+  const { loading, isLogged } = useGlobalContext();
 
+  if (!loading && isLogged) return <Redirect href="/home" />;
+  return (
+    
     <GestureHandlerRootView className="flex-1">
     <SafeAreaView className="bg-secondary h-full">
       <ScrollView contentContainerStyle={{height: '100%'}}>

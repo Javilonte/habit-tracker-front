@@ -1,19 +1,19 @@
 import { Image, View, Text } from 'react-native'
+import { StatusBar } from "expo-status-bar";
 import React from 'react'
 import { Tabs , Redirect} from 'expo-router'
 import { icons } from '../../constants/icons'
 
-const TabIcon = (icon,color,  name, focused) =>{
+const TabIcon = ({ icon ,color ,name, focused}) =>{
   return (
-    <View className="items-center justify-center gap-2">
+    <View className="items-center justify-center gap-1 mt-2" >
       <Image 
         source={icon}
         resizeMode="contain"
         tintColor={color}
-        className="w-10 h-10 bg-buttons p-6 "
+        className="w-6 h-6 p-1"
       />
-      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'}`}>
-
+      <Text className={`${focused ? 'font-psemibold' : 'font-pregular'}`}style={{ color: className="bg-secondary" }}>
         {name}
       </Text>
     </View>
@@ -25,7 +25,7 @@ const TabsLayout = () => {
     <Tabs 
       screenOptions={{
         tabBarShowLabel: false,
-        tabBarActiveTintColor: '#primary'
+        tabBarActiveTintColor: "#A1DD70"
       }}
     >
 
@@ -66,7 +66,7 @@ const TabsLayout = () => {
           headerShown: false, 
           tabBarIcon:({color, focused}) => (
             <TabIcon 
-              icon={icons.create}
+              icon={icons.eye}
               color={color}
               name="Create"
               focused={focused}

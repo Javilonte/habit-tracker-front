@@ -1,10 +1,10 @@
 import { Text, View, Image} from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { Link } from 'expo-router'
-import {icons} from '../constants/icons'
+import { icons } from '../constants/icons'
 import { SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "../components/CustomButton";
 
 export default function Index() {
   return (
@@ -13,9 +13,7 @@ export default function Index() {
     <SafeAreaView className="bg-secondary h-full">
       <ScrollView contentContainerStyle={{height: '100%'}}>
         <View className="w-full justify-center items-center h-full px-4">
-
           <Image source ={icons.logo} // This is being used just as a playholder
-
           className="justify-content w-[360px] h-[240px]"
           resizeMode="contain"
           />
@@ -24,13 +22,16 @@ export default function Index() {
            Embárcate en tu Aventura Épica de Hábitos
            </Text>
            </Text>
-          <CustomButton></CustomButton>
-          
+           <Link href="/home">Botón temporal</Link>
+          <CustomButton 
+            title="Continue with Email"
+            handlePress={() => router.push('/sign-in')}
+            containerStyles={"w-full m-7"}
+          /> 
         </View>
-
       </ScrollView>
+      <StatusBar />
     </SafeAreaView>
     </GestureHandlerRootView>
   );
 }
-  

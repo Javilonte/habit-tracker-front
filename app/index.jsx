@@ -4,14 +4,15 @@ import { Link, Redirect } from 'expo-router'
 import { icons } from '../constants/icons'
 import { SafeAreaView } from "react-native-safe-area-context";
 import { GestureHandlerRootView} from "react-native-gesture-handler";
-import CustomButton from "../components/CustomButton";/* 
+import CustomButton from "../components/CustomButton";
+import Loader from "../components/Loader";/* 
 import { useGlobalContext } from "../context/GlobalProvider";  */
 
-export default function Index() {
-  /* const { loading, isLogged } = useGlobalContext();
+export default function Index() {/* 
+  const { loading, isLogged } = useGlobalContext();
+  if (!loading && isLogged) return <Redirect href="/home" />; */
 
-  if (!loading && isLogged) return <Redirect href="/home" />;
-  return ( */
+  return (
     
     <GestureHandlerRootView className="flex-1">
       {/* <Loader isLoading={loading} /> */}
@@ -28,15 +29,15 @@ export default function Index() {
            </Text>
            </Text>
            <Link href="/home">Botón temporal</Link>
-          <CustomButton 
+            <CustomButton 
             title="Continue with Email"
-            handlePress={() => router.push('/sign-in')}
+            /* handlePress={() => router.push('/sign-in')} */
             containerStyles={"w-full m-7"}
-          /> 
+          />
         </View>
       </ScrollView>
-      {/* <StatusBar /> */}
+       <StatusBar />
     </SafeAreaView>
     </GestureHandlerRootView>
-  ;
+  );
 }

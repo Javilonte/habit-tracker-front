@@ -28,7 +28,7 @@ export default function Index() {/*
            Embárcate en tu Aventura Épica de Hábitos
            </Text>
            </Text>
-           <Link href="/home">Botón temporal</Link>
+           <Link href="/sign-in">Botón temporal</Link>
             <CustomButton 
             title="Continue with Email"
             /* handlePress={() => router.push('/sign-in')} */

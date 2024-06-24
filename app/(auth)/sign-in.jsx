@@ -12,7 +12,7 @@ const SignIn = () => {
     })
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-        <SafeAreaView className="bg-secondary h-full">
+        <SafeAreaView className="bg-background h-full">
             <ScrollView>
                 <View className="w-full justify-center min-h-[85] px-4 my-6">
                 <Image source={icons.profile} resizeMode='contain' className="w-[115px] h-[35px] " />

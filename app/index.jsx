@@ -16,7 +16,7 @@ export default function Index() {/*
     
     <GestureHandlerRootView className="flex-1">
       {/* <Loader isLoading={loading} /> */}
-    <SafeAreaView className="bg-secondary h-full">
+    <SafeAreaView className="bg-background h-full">
       <ScrollView contentContainerStyle={{height: '100%'}}>
         <View className="w-full justify-center items-center h-full px-4">
           <Image source ={icons.logo} // This is being used just as a playholder

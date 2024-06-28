@@ -13,7 +13,8 @@
       "backgroundColor": "#000"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "package": "com.javi.modernhabits"
     },
     "android": {
       "adaptiveIcon": {
